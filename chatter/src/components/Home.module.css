@@ -1,0 +1,123 @@
+@media screen and (min-width: 450px) {
+  .container {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .buttonGroupActive {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 30%;
+    justify-content: space-around;
+    animation: boxActive 1s forwards ease-in-out;
+    position: relative;
+  }
+
+  .buttonGroupClose {
+    width: 100%;
+    display: flex;
+    padding-top: 30%;
+    flex-direction: row;
+    justify-content: space-around;
+    animation: boxClose 1s forwards ease-in-out;
+    position: relative;
+  }
+
+  @keyframes boxActive {
+    0% {
+      right: -200%;
+    }
+    100% {
+      right: 0%;
+    }
+  }
+
+  @keyframes boxClose {
+    0% {
+      left: 0%;
+    }
+    100% {
+      left: -250%;
+    }
+  }
+
+  .button {
+    width: 100px;
+    height: 40px;
+    background-color: #FDAE38;
+    color: black;
+    border: none;
+    font-size: 16px;
+    border-radius: 15px;
+  }
+
+  .button:hover {
+    background-color: rgb(158, 226, 226);
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .container {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .buttonGroupActive {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    animation: boxActive 1s forwards ease-in-out;
+    position: relative;
+  }
+
+  .buttonGroupClose {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    animation: boxClose 1s forwards ease-in-out;
+    position: relative;
+  }
+
+  .button {
+    width: 100px;
+    height: 40px;
+    margin-top: 30%;
+    background-color: #FDAE38;
+    color: black;
+    border: none;
+    font-size: 16px;
+    border-radius: 15px;
+  }
+
+  @keyframes boxActive {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0%;
+    }
+  }
+
+  @keyframes boxClose {
+    0% {
+      left: 0%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+  .button:hover {
+    background-color: rgb(158, 226, 226);
+  }
+}
