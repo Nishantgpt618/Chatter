@@ -2,7 +2,7 @@ import React from 'react';
 import { io } from 'socket.io-client';
 let origin;
 if( process.env.NODE_ENV === "production"){
-    origin = "https://polar-bayou-51020.herokuapp.com" 
+    origin = "http://3.106.244.65s" 
   }
   else{
     origin = 'http://localhost:3000'
