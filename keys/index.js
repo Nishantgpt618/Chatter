@@ -1,4 +1,4 @@
-console.log("process.env",JSON.stringify(process))
+console.log("process.env",JSON.stringify(process?.env))
 if(process.env.NODE_ENV === "production"){
     module.exports = require("./prod");
 }else{
