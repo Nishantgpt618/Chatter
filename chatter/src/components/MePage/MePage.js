@@ -14,22 +14,21 @@ function MePage() {
   const [showNames, setShowNames] = useState(true);
 
   return (
-    <div className={styles.outerContainer}>
-      <div className={styles.container}>
-        <div className={styles.chatNames}>
+    <div className={`w-full ${styles.outerContainer}`}>
+      <div className="hidden sm:flex flex-row justify-between" style={{minHeight: "calc(100vh - 70px)"}}>
+        <div className={`flex w-1/4 flex-col items-center overflow-x-hidden overflow-y-auto ${styles.chatNames}`}>
           <StartChat />
-          <br />
           {chats ? (
             <SelectChat setShowNames={setShowNames} />
           ) : (
             <p>You haven't started a conversation yet</p>
           )}
         </div>
-        <div className={styles.chats}>
+        <div className={`w-3/4 bg-white text-black ${styles.chats}`}>
           {clickedName ? (
             <ChatPage setShowNames={setShowNames} />
           ) : (
-            <p> Select a name to start a conversation</p>
+            <span className="text-black text-xl font-medim w-max block mx-auto">Select a name to start a conversation</span>
           )}
         </div>
       </div>

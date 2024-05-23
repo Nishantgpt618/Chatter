@@ -43,9 +43,9 @@ function ChatPage() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.chatDetails}>
-        <img alt="" />
-        <h3>{clickedName[0].toUpperCase() + clickedName.slice(1)}</h3>
+      <div className={`w-full border-b shadow px-7 py-2.5 flex ${styles.chatDetails}`}>
+        {/* <img alt="" /> */}
+        <span className="text-xl font-bold">{clickedName[0].toUpperCase() + clickedName.slice(1)}</span>
       </div>
       <div className={styles.chatwindow}>
         <div className={styles.chatBox} >
@@ -57,9 +57,9 @@ function ChatPage() {
                 return (
                   <div key={index}
                     className={
-                      loggedInUser._id === message.from._id
-                        ? styles.chatMessageSender
-                        : styles.chatMessageReceiver
+                      ` ${loggedInUser._id === message.from._id
+                        ? ` ${styles.chatMessageSender}`
+                        : `bg-gray-400 ${styles.chatMessageReceiver}`}`
                     }
                   >
                     <div>

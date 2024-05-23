@@ -1,26 +1,4 @@
 @media screen and (min-width: 450px) {
-    .container{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        height: 40px;
-        width: 80%;
-    }
-    
-    .containerOne{
-        width: 35px;
-        height: 35px;
-    }
-    
-    .containerTwo{
-        width: 150px;
-        height: 35px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    
-    
     
     .add{
         width: 35px;

@@ -10,6 +10,7 @@ import {
 
 export default function SelectChat(props) {
   const { loggedInUser } = useSelector((state) => state.login);
+  const { clickedId } = useSelector((state) => state.startChat);
   const dispatch = useDispatch();
 
   const renderName = (chat) => {
@@ -52,7 +53,7 @@ export default function SelectChat(props) {
       {loggedInUser.AllchatID.map((chat, index) => (
         <div
           key={index}
-          className={styles.container}
+          className={`w-full flex items-center hover:text-base hover:font-bold  ${(clickedId == chat?.userOne?._id || clickedId == chat?.userTwo?._id) ? "bg-gray-100" : "bg-white"} border-b hover:shadow p-2 ${styles.container}`}
           onClick={() => {
             dispatch(clearChat());
             props.setShowNames(false);
@@ -66,8 +67,14 @@ export default function SelectChat(props) {
             );
           }}
         >
-          <h3>{renderName(chat)}</h3>
-          {renderLastMessage(chat)}
+          <div className="mr-2 flex items-center justify-center font-bold rounded-full h-10 w-10 bg-teal-100 ">
+            <span className="">{renderName(chat).split(" ")[0].slice(0,1)}</span>
+            <span className="">{renderName(chat).split(" ")[1] && renderName(chat).split(" ")[1].slice(0,1)}</span>
+          </div>
+          <div>
+            <span className="">{renderName(chat)}</span>
+            <span className="font-medium">{renderLastMessage(chat)}</span>
+          </div>
         </div>
       ))}
     </React.Fragment>

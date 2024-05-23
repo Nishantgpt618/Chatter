@@ -42,8 +42,7 @@ function NamesContainer(props) {
   }
 
   return (
-    <div className={styles.container}>
-      <button className={styles.button} onClick={() => props.setActive(false)}>Close</button>
+    <div className={`absolute overflow-x-hidden overflow-y-auto bg-gray-100 flex flex-col rounded-b-lg top-8 left-0 w-full ${styles.container}`}>
       {names && names.filter((user) =>
           user?.email?.toLowerCase().includes(props.searchTerm.toLowerCase())
         )

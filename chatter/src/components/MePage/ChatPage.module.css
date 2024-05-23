@@ -8,12 +8,7 @@
 }
 
 .chatDetails {
-  width: 98%;
-  height: 9%;
-  border: 2px solid #752d2d;
-  border-radius: 10px;
-  background-color: rgb(137, 201, 184);
-  display: flex;
+  /* background-color: rgb(158, 226, 226);       */
   flex-direction: row;
   align-items: center;
 }
@@ -95,7 +90,6 @@
   margin: 5px 0;
   padding: 2px 5px;
   border-radius: 5px;
-  background-color: whitesmoke;
 }
 
 .inputDiv {
